@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  rlcraft:
+    build: ./
+    container_name: rlcraft
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+    ports:
+      - 25565:25565
+    volumes:
+      - ./data:/rlcraft
+    environment:
+      - EULA=TRUE
+      - FORGEVERSION=14.23.5.2854
+
+  
