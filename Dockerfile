@@ -14,6 +14,7 @@ RUN apt-get update && \
 EXPOSE 25565
 
 COPY entrypoint.sh /root/entrypoint.sh
+CMD "-Xmx4G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -Xmn128M"
 ENTRYPOINT /root/entrypoint.sh
 
 
