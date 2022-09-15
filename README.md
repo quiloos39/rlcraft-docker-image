@@ -15,5 +15,5 @@ sudo docker build -t rlcraft:latest .
 Initial Start (First time running)
 
 ```bash
-sudo docker run -d -v $(pwd)/data:/rlcraft -e EULA=true -p 25565:25565 --name rlcraft rlcraft:latest [extra options]
+sudo docker run -d -v $(pwd)/data:/rlcraft -e EULA=true -p 25565:25565 --memory=6G --name rlcraft rlcraft:latest [extra options]
 ```
