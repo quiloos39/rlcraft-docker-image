@@ -27,7 +27,8 @@ COPY --from=builder /rlcraft .
 
 EXPOSE 25565
 
-CMD java -jar forge.jar nogui -Xmx32G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -Xmn128M
+CMD -Xmx32G -Xmn1G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy 
 
+ENTRYPOINT java -jar forge.jar nogui 
 
 
